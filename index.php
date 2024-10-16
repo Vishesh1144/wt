@@ -23,12 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['firstname'])) {
     $password = $_POST['password'];
     $address = $_POST['address'];
     $pincode = $_POST['pincode'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
+    $city = $_POST['ct'];
+    $state = $_POST['st'];
     $contact = $_POST['contact'];
 
     // Prepare the SQL query
-    $sql = "INSERT INTO usereg (firstname, lastname, password, address, pincode, city, state, email, contact) 
+    $sql = "INSERT INTO `usereg` (`firstname`, `lastname`, `password`, `address`, `pincode`, `city`, `state`, `email`, `contact`) 
             VALUES ('$firstname', '$lastname', '$password', '$address', '$pincode', '$city', '$state', '$email', '$contact')";
     
     // Execute the query
